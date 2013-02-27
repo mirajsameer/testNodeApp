@@ -91,7 +91,7 @@
       </script>
     <![endif]-->
   </head>
-  <body bgcolor="gray">
+  <body style="background-image:url(Stark-Winter-is-Coming-Game-of-Thrones.jpeg)" bgcolor="red">
     <div id="fb-root"></div>
     <script type="text/javascript">
       window.fbAsyncInit = function() {
@@ -126,8 +126,7 @@
         fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     </script>
-
-    <header class="clearfix">
+	<header class="clearfix">
       <% if (user) { %>
       <p id="picture" style="background-image: url(https://graph.facebook.com/<%= user.id %>/picture?type=normal)"></p>
 
@@ -261,6 +260,9 @@
         </li>
       </ul>
     </section>
+	<script type"text/javascript">	
+	 alert("Winter is Coming!!! again");
+	</script>
   </body>
 </html>
 
