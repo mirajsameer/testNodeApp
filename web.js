@@ -57,7 +57,7 @@ function render_page(req, res) {
 }
 
 function handle_facebook_request(req, res) {
-
+	console.log("\n\n\n\n\nSamee says hi  \n\n\n\n");
   // if the user is logged in
   if (req.facebook.token) {
 
@@ -98,6 +98,18 @@ function handle_facebook_request(req, res) {
     render_page(req, res);
   }
 }
+function sameer(req, res){
+	//console.log('inside sameer function' + JSON.stringify(req));
+	//res.write('resposnding to request sameer');
+	//res.end('ended the response');
+	res.render('sameer.ejs', {
+        layout:    false,
+        req:       req,
+		app: 	   app,
+		temp:	   'hello'
+    });
+}
 
 app.get('/', handle_facebook_request);
+app.get('/sameer',sameer);
 app.post('/', handle_facebook_request);
