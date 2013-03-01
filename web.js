@@ -102,12 +102,14 @@ function sameer(req, res){
 	//console.log('inside sameer function' + JSON.stringify(req));
 	//res.write('resposnding to request sameer');
 	//res.end('ended the response');
-	res.render('sameer.ejs', {
-        layout:    false,
-        req:       req,
-		app: 	   app,
-		temp:	   'hello'
-    });
+	req.facebook.app(function(app) {
+		res.render('sameer.ejs', {
+			layout:    false,
+			req:       req,
+			app: 	   app,
+			temp:	   'hello'
+		});
+	});
 }
 
 app.get('/', handle_facebook_request);
